@@ -156,6 +156,9 @@ install_package_if_not_installed rofi
 # Install dunst for notification
 install_package_if_not_installed dunst
 
+# Install libnotify-bin package for notification functionality
+install_package_if_not_installed libnotify-bin
+
 # Install nitrogen for background wallpaper
 install_package_if_not_installed nitrogen
 
