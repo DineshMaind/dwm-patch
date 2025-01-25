@@ -1,0 +1,12 @@
+#!/bin/bash
+
+while true; do
+	VOL=$(dwm-vol)
+	CPU=$(dwm-cpu)
+	MEM=$(dwm-memory)
+	HDD=$(dwm-disk)
+	TIME=$(dwm-clock)
+	xsetroot -name "| $VOL | $CPU | $MEM | $HDD | $TIME |"
+
+	sleep 5s
+done
