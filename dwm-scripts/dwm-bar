@@ -1,12 +1,14 @@
 #!/bin/bash
 
 while true; do
+	UPTIME=$(uptime -p | sed s/up\ //g)
 	VOL=$(dwm-vol)
 	CPU=$(dwm-cpu)
 	MEM=$(dwm-memory)
 	HDD=$(dwm-disk)
 	TIME=$(dwm-clock)
-	xsetroot -name "| $VOL | $CPU | $MEM | $HDD | $TIME |"
+
+	xsetroot -name "| $UPTIME | $VOL | $CPU | $MEM | $HDD | $TIME |"
 
 	sleep 5s
 done

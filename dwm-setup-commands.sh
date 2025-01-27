@@ -115,7 +115,8 @@ function install_dwm() {
 	abort_on_fail
 
 	echo "Copying $resource_dir/dwm-scripts directory to $base_path/dwm-scripts directory." | tee -a $log_file
-	cp -rvf $resource_dir/dwm-scripts/ $base_path/dwm-scripts/ | tee -a $log_file
+	mkdir $base_path/dwm-scripts
+	cp -rvf $resource_dir/dwm-scripts/dwm-* $base_path/dwm-scripts/ | tee -a $log_file
 	abort_on_fail
 
 	chmod +x $base_path/dwm-scripts/dwm-* | tee -a $log_file
